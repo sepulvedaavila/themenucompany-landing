@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* The Menu Company Brand Colors (HSL) */
+    --background: 0 0% 100%;           /* White */
+    --foreground: 0 0% 13.7%;          /* #232323 Carbon black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13.7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13.7%;
+
+    --primary: 142 12% 26.7%;          /* #3C4C42 Dark green */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 95.7%;           /* #F4F4F4 */
+    --secondary-foreground: 0 0% 13.7%;
+
+    --muted: 210 4% 61.2%;             /* #989CA0 Gray medium */
+    --muted-foreground: 210 4% 61.2%;
+
+    --accent: 145 6% 38.4%;            /* #5C6861 Sage green */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 142 12% 26.7%;
+
+    --radius: 0.25rem;
+
+    /* Brand-specific tokens */
+    --deep-green: 97 27% 18.8%;        /* #2D3D23 */
+    --sage: 145 6% 38.4%;              /* #5C6861 */
+    --gray-medium: 210 4% 61.2%;       /* #989CA0 */
+    --carbon: 0 0% 13.7%;              /* #232323 */
+    --bone: 0 0% 95.7%;                /* #F4F4F4 */
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 142 12% 26.7%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 142 12% 26.7%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-arsenal antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-arsenal;
+  }
+
+  /* Navigation & label style */
+  .nav-label {
+    @apply uppercase tracking-[0.15em] font-arsenal text-sm;
+  }
+}
+
+@layer components {
+  .btn-brand {
+    @apply bg-deep-green text-white uppercase tracking-[0.15em] font-arsenal font-bold 
+           px-8 py-3 rounded-sm transition-all duration-300
+           hover:opacity-90 text-sm;
+  }
+
+  .section-divider {
+    @apply w-full h-px bg-border;
+  }
+
+  .serif-heading {
+    @apply font-playfair;
+  }
+}
