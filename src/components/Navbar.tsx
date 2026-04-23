@@ -35,9 +35,14 @@ const Navbar = () => {
         </div>
 
         {/* CTA */}
-        <button className="hidden md:block btn-brand text-[9px] lg:text-xs py-1.5 px-3 lg:px-6">
+        <a
+          href="https://app.themenucompany.mx/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:block btn-brand text-[9px] lg:text-xs py-1.5 px-3 lg:px-6"
+        >
           INICIAR SESIÓN
-        </button>
+        </a>
 
         {/* Mobile toggle */}
         <button
@@ -62,9 +67,15 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <button className="btn-brand text-xs py-2 px-6 mt-2 w-fit">
+          <a
+            href="https://app.themenucompany.mx/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-brand text-xs py-2 px-6 mt-2 w-fit"
+            onClick={() => setMobileOpen(false)}
+          >
             INICIAR SESIÓN
-          </button>
+          </a>
         </div>
       )}
     </nav>
