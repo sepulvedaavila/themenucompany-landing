@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo-themenuco-stacked.png";
 
 const Footer = () => {
   return (
     <footer className="bg-background text-carbon">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* Logo vertical */}
-        <div className="flex flex-col gap-1 font-playfair tracking-[0.2em] text-sage">
-          <span className="text-sm">THE</span>
-          <span className="text-3xl font-bold">MENU</span>
-          <span className="text-sm">COMPANY</span>
+        {/* Logo */}
+        <div>
+          <img src={logo} alt="The Menu Company" className="h-32 w-auto" />
         </div>
 
         {/* Nosotras */}

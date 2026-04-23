@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-themenuco.png";
 
 const navLinks = [
   { label: "Sobre Nosotras", href: "/sobre-nosotras" },
@@ -16,10 +17,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="/" className="flex items-baseline gap-1 font-playfair tracking-[0.15em]">
-          <span className="text-xs text-carbon">THE</span>
-          <span className="text-xl text-primary font-bold">MENU</span>
-          <span className="text-xs text-carbon">CO.</span>
+        <a href="/" aria-label="The Menu Co. - Inicio" className="flex items-center">
+          <img src={logo} alt="The Menu Co." className="h-10 w-auto" />
         </a>
 
         {/* Desktop Nav */}
